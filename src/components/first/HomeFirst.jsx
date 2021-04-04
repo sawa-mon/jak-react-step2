@@ -1,14 +1,7 @@
-
-export const Home = () => {
-  return (
-    <div>
-      <h1>Homeページです</h1>
-    </div>
-  )
 import React, { useCallback, useMemo, useState } from "react"
 import {ChildArea} from "./ChildArea"
 
-export const Home = () => {
+export const HomeFirst = () => {
 	console.log("App")
 	const[text, setText] = useState("")
 	const[open, setOpen] = useState("false")
