@@ -1,10 +1,3 @@
-
-export const Home = () => {
-  return (
-    <div>
-      <h1>Homeページです</h1>
-    </div>
-  )
 import React, { useCallback, useMemo, useState } from "react"
 import {ChildArea} from "./ChildArea"
 
