@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Link } from "react-router-dom";
 import { Router } from "./router/Router";
@@ -16,17 +15,6 @@ function App() {
       </div>
       <Router />
     </BrowserRouter>
-
-import logo from './logo.svg';
-import './App.css';
-import {Home} from './Home'
-
-function App() {
-  return (
-    <div>
-      <Home/>
-    </div>
-
   );
 }
 
