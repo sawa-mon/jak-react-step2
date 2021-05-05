@@ -1,8 +1,9 @@
+import { memo } from "react"
 import styled from "styled-components"
 import { Button } from "../atoms/button/Button"
 import { Input } from "../atoms/input/Input"
 
-export const SearchInput = () => {
+export const SearchInput = memo(() => {
   return (
     <StyledContainer>
       <Input placeholder="検索条件を入力" />
@@ -11,7 +12,7 @@ export const SearchInput = () => {
       </StyledButtonWrapper>
     </StyledContainer>
   )
-}
+})
 
 const StyledContainer = styled.div`
   display: flex;

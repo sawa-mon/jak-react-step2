@@ -1,4 +1,7 @@
+import { useContext } from "react"
 import styled from "styled-components"
+import { UserContext } from "../../providers/UserProvider"
+import { Button } from "../atoms/button/Button"
 import { SearchInput } from "../molecules/SearchInput"
 import { UserCard } from "../organisms/user/UserCard"
 
@@ -17,11 +20,15 @@ const users = [...Array(10).keys()].map((value) => {
 })
 
 export const Users = () => {
+  const {userInfo, setUserInfo} = useContext(UserContext)
+  const onClickSwitch = () => setUserInfo({isAdmin: !userInfo.isAdmin})
 
   return (
     <StyledContainer>
       <h2>ユーザー一覧</h2>
       <SearchInput />
+      <br />
+      <Button secondary onClick={onClickSwitch}>切替</Button>
       <StyledUserArea>
         {users.map((user) => (
         <UserCard key={users.id} user={user} />
