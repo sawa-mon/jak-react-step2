@@ -1,22 +1,27 @@
-import logo from "./logo.svg";
 import "./App.css";
-import { BrowserRouter, Link } from "react-router-dom";
-import { Router } from "./router/Router";
+import axios from "axios"
+
 
 function App() {
+  const onClickUser0 = () => {
+    axios.get("https://jsonplaceholder.typicode.com/users").then((result) => {
+      console.log(result)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
+  const onClickUser1 = () => {
+    axios.get("https://jsonplaceholder.typicode.com/users?id=1").then((result) => {
+      console.log(result)
+    }).catch((error) => {
+      console.log(error)
+    })
+  }
   return (
-    <BrowserRouter>
-      <div>
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/page1">Page1</Link>
-        <br />
-        <Link to="/page2">Page2</Link>
-        <br />
-      </div>
-      <Router />
-    </BrowserRouter>
-
+    <div>
+      <button onClick={onClickUser0}>users</button>
+      <button onClick={onClickUser1}>id=1のusers</button>
+    </div>
   );
 }
 
