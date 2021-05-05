@@ -1,0 +1,8 @@
+## props
+ここでのボタンは色に関してはpropsにて渡している
+
+## PrimaryとSecondary
+何種類かにわたるボタンのスタイルを柔軟に変更できるようにできるかの試し
+
+・BaseButtonではカラーの２種をpropsとして渡しているが
+・それ以外の項目をPrimaryとSecondaryにて設定する

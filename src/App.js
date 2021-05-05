@@ -1,23 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { BrowserRouter, Link } from "react-router-dom";
 import { Router } from "./router/Router";
+import styled from "styled-components"
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Link to="/">Home</Link>
-        <br />
-        <Link to="/page1">Page1</Link>
-        <br />
-        <Link to="/page2">Page2</Link>
-        <br />
-      </div>
-      <Router />
-    </BrowserRouter>
-
+    <Router/>
   );
 }
 
 export default App;
+
+const StyledHomePosition = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
