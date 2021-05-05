@@ -1,12 +1,14 @@
-import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components"
 import { UserContext } from "../../providers/UserProvider";
 import { Button } from "../atoms/button/Button"
+import { useSetRecoilState} from "recoil"
+import { userState } from "../../store/userState";
 
 export const Top = () => {
   const history = useHistory()
-  const {setUserInfo} = useContext(UserContext)
+  // const {setUserInfo} = useContext(UserContext)
+  const setUserInfo = useSetRecoilState(userState)
 
   const onClickAdmin = () => {
     setUserInfo({isAdmin: true})
